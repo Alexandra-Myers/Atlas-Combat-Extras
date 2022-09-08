@@ -1,7 +1,7 @@
 package com.atlas.atlas_combat_extras.mixin;
 
 import com.atlas.atlas_combat_extras.AtlasCombatExtras;
-import net.minecraft.client.gui.screen.TitleScreen;
+import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
