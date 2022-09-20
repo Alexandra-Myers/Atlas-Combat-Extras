@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:tipped_fletching",
+  "stick": {
+    "item": "minecraft:stick"
+  },
+  "feather": {
+    "item": "minecraft:feather"
+  },
+  "flint": {
+    "tag": "minecraft:stone_tool_materials"
+  },
+  "potion": {
+    "item": "minecraft:potion"
+  },
+  "result": {
+    "item": "atlas_combat:stonehead_tipped_arrow",
+    "count": 4
+  }
+}

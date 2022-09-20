@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:arrow",
+    "minecraft:tipped_arrow",
+    "minecraft:spectral_arrow",
+    "atlas_combat:stonehead_arrow",
+    "atlas_combat:stonehead_tipped_arrow",
+    "atlas_combat:stonehead_spectral_arrow"
+  ]
+}

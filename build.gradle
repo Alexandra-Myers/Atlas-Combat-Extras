@@ -6,8 +6,12 @@ plugins {
 archivesBaseName = project.archives_base_name
 version = project.version
 group = project.maven_group
+loom {
+	accessWidenerPath = file("src/main/resources/atlas_combat_extras.accesswidener")
+}
 
 repositories {
+	allprojects { repositories { maven { url 'https://jitpack.io' } } }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 	// Add repositories to retrieve artifacts from in here.
@@ -26,11 +30,22 @@ dependencies {
 		officialMojangMappings() // Uncomment if you want to use Mojang mappings as your primary mappings, falling back on QM for parameters and Javadocs
 	}
 	modImplementation libs.quilt.loader
+	implementation("com.github.LlamaLad7:MixinExtras:0.0.12")
+	annotationProcessor("com.github.LlamaLad7:MixinExtras:0.0.12")
+	include("com.github.LlamaLad7:MixinExtras:0.0.12")
 
 	// QSL is not a complete API; You will need Quilted Fabric API to fill in the gaps.
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modApi ("me.shedaniel.cloth:cloth-config-fabric:8.0.75") {
 		exclude(group: "net.fabricmc.fabric-api")
+	}
+	modImplementation("com.github.Chocohead:Fabric-ASM:v${rootProject.fabric_asm_version}") {
+		exclude group: 'net.fabricmc'
+		exclude group: "net.fabricmc.fabric-api"
+	}
+	include("com.github.Chocohead:Fabric-ASM:v${rootProject.fabric_asm_version}") {
+		exclude group: 'net.fabricmc'
+		exclude group: "net.fabricmc.fabric-api"
 	}
 	modImplementation libs.quilted.fabric.api
 	modImplementation 'com.github.Alexandra-Myers:Atlas-Combat:1.19.2-1.0.8'

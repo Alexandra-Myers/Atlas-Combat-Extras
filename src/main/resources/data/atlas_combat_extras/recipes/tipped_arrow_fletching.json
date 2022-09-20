@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:tipped_fletching",
+  "stick": {
+    "item": "minecraft:stick"
+  },
+  "feather": {
+    "item": "minecraft:feather"
+  },
+  "flint": {
+    "item": "minecraft:flint"
+  },
+  "potion": {
+    "item": "minecraft:potion"
+  },
+  "result": {
+    "item": "minecraft:tipped_arrow",
+    "count": 4
+  }
+}

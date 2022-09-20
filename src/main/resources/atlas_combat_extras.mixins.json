@@ -3,8 +3,15 @@
   "minVersion": "0.8",
   "package": "com.atlas.atlas_combat_extras.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
+  "plugin": "com.atlas.atlas_combat_extras.mixin.MixinPlugin",
+  "mixins": [
+    "ArrowMixin",
+    "FletchingTableMixin",
+    "IngredientMixin",
+    "PotionMixin"
+  ],
   "client": [
+    "ItemColorsMixin",
     "TitleScreenMixin"
   ],
   "injectors": {

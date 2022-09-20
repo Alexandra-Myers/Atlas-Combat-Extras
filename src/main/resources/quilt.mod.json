@@ -35,5 +35,6 @@
 			}
 		]
 	},
-	"mixin": "atlas_combat_extras.mixins.json"
+	"mixin": "atlas_combat_extras.mixins.json",
+	"access_widener" : "atlas_combat_extras.accesswidener"
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:fletching",
+  "stick": {
+    "item": "minecraft:stick"
+  },
+  "feather": {
+    "item": "minecraft:feather"
+  },
+  "flint": {
+    "tag": "minecraft:stone_tool_materials"
+  },
+  "result": {
+    "item": "atlas_combat:stonehead_arrow",
+    "count": 4
+  }
+}

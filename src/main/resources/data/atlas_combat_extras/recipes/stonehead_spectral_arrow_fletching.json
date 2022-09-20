@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:spectral_fletching",
+  "stick": {
+    "item": "minecraft:stick"
+  },
+  "feather": {
+    "item": "minecraft:feather"
+  },
+  "flint": {
+    "tag": "minecraft:stone_tool_materials"
+  },
+  "potion": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "item": "atlas_combat:stonehead_spectral_arrow",
+    "count": 8
+  }
+}
