@@ -8,7 +8,9 @@
     "ArrowMixin",
     "FletchingTableMixin",
     "IngredientMixin",
-    "PotionMixin"
+    "PotionMixin",
+    "SpectralArrowItemMixin",
+    "SpectralArrowMixin"
   ],
   "client": [
     "ItemColorsMixin",

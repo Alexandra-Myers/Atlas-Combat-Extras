@@ -11,7 +11,6 @@ import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
-import org.checkerframework.checker.units.qual.A;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -88,8 +87,8 @@ public abstract class ArrowMixin extends AbstractArrow {
 	public void injectDamageModifier(CallbackInfo ci) {
 		++currentTimer;
 		if (strongButHeavy && !alreadyChanged) {
-			setBaseDamage(getBaseDamage() * 1.25);
-			setDeltaMovement(getDeltaMovement().scale(0.7));
+			setBaseDamage(getBaseDamage() * 2.5);
+			setDeltaMovement(getDeltaMovement().scale(0.5));
 			alreadyChanged = true;
 		}
 	}

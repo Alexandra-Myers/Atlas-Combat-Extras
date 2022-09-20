@@ -59,9 +59,6 @@ public class AtlasCombatExtras implements ModInitializer {
 	static <S extends RecipeSerializer<T>, T extends Recipe<?>> S register(String id, S serializer) {
 		return Registry.register(Registry.RECIPE_SERIALIZER, id, serializer);
 	}
-	static {
-		MenuScreens.register(FLETCHING, FletchingScreen::new);
-	}
 	public static final ResourceLocation INTERACT_WITH_FLETCHING_TABLE = Stats.makeCustomStat("interact_with_fletching_table", StatFormatter.DEFAULT);
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod name as the logger's name.

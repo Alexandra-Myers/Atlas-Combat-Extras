@@ -18,7 +18,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.atlas.atlas_combat_extras.AtlasCombatExtras"
+			"init": "com.atlas.atlas_combat_extras.AtlasCombatExtras",
+			"client_init": "com.atlas.atlas_combat_extras.AtlasCombatExtrasClient"
 		},
 		"depends": [
 			{
