@@ -19,7 +19,9 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "com.atlas.atlas_combat_extras.AtlasCombatExtras",
-			"client_init": "com.atlas.atlas_combat_extras.AtlasCombatExtrasClient"
+			"client_init": "com.atlas.atlas_combat_extras.AtlasCombatExtrasClient",
+			"mm:early_risers": "com.atlas.atlas_combat_extras.EarlyRiser",
+			"booking_it:recipe_book": "com.atlas.atlas_combat_extras.FletchingRecipeBookAdder"
 		},
 		"depends": [
 			{

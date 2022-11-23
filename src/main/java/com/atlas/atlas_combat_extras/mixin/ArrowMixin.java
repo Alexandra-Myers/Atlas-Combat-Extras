@@ -87,8 +87,8 @@ public abstract class ArrowMixin extends AbstractArrow {
 	public void injectDamageModifier(CallbackInfo ci) {
 		++currentTimer;
 		if (strongButHeavy && !alreadyChanged) {
-			setBaseDamage(getBaseDamage() * 2.5);
-			setDeltaMovement(getDeltaMovement().scale(0.5));
+			setBaseDamage(getBaseDamage() * 4);
+			setDeltaMovement(getDeltaMovement().scale(0.3));
 			alreadyChanged = true;
 		}
 	}

@@ -30,7 +30,6 @@ public class FletchingRecipe implements Recipe<Container> {
 		this.feather = ingredient3;
 		this.potion =  Ingredient.EMPTY;
 		this.result = itemStack;
-		FletchingMenu.removeAmount = 1;
 	}
 	public FletchingRecipe(ResourceLocation resourceLocation, Ingredient ingredient, Ingredient ingredient2, Ingredient ingredient3, Ingredient ingredient4, ItemStack itemStack) {
 		this.id = resourceLocation;
@@ -39,7 +38,6 @@ public class FletchingRecipe implements Recipe<Container> {
 		this.feather = ingredient3;
 		this.potion = ingredient4;
 		this.result = itemStack;
-		FletchingMenu.removeAmount = 1;
 	}
 
 	@Override

@@ -14,11 +14,19 @@ repositories {
 	allprojects { repositories { maven { url 'https://jitpack.io' } } }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven { url 'https://maven.wispforest.io' }
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -47,8 +55,12 @@ dependencies {
 		exclude group: 'net.fabricmc'
 		exclude group: "net.fabricmc.fabric-api"
 	}
+	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
+	modImplementation include("maven.modrinth:booking_it:1.0.2")
+	// only if you plan to use owo-config
+	annotationProcessor "io.wispforest:owo-lib:${project.owo_version}"
 	modImplementation libs.quilted.fabric.api
-	modImplementation 'com.github.Alexandra-Myers:Atlas-Combat:1.19.2-1.0.8'
+	modImplementation 'com.github.Alexandra-Myers:Atlas-Combat:1.19.2-1.1.0'
 	modImplementation 'com.github.rizecookey:CookeyMod:1.7.0+1.19.2'
 	modImplementation 'com.github.TeamMidnightDust:MidnightLib:v0.6.0'
 	modApi "com.terraformersmc:modmenu:4.0.6"
