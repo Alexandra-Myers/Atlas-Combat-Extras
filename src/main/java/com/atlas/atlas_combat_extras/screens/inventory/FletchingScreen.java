@@ -1,6 +1,7 @@
 package com.atlas.atlas_combat_extras.screens.inventory;
 
 import com.atlas.atlas_combat_extras.container.FletchingMenu;
+import com.atlas.atlas_combat_extras.recipe.FletchingRecipeBookComponent;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.fabricmc.api.EnvType;
@@ -20,7 +21,7 @@ import net.minecraft.world.inventory.Slot;
 public class FletchingScreen extends AbstractContainerScreen<FletchingMenu> implements RecipeUpdateListener {
 	private static final ResourceLocation CRAFTING_TABLE_LOCATION = new ResourceLocation("textures/gui/container/fletching.png");
 	private static final ResourceLocation RECIPE_BUTTON_LOCATION = new ResourceLocation("textures/gui/recipe_button.png");
-	private final RecipeBookComponent recipeBookComponent = new RecipeBookComponent();
+	private final FletchingRecipeBookComponent recipeBookComponent = new FletchingRecipeBookComponent();
 	private boolean widthTooNarrow;
 
 	public FletchingScreen(FletchingMenu craftingMenu, Inventory inventory, Component component) {
@@ -105,12 +106,6 @@ public class FletchingScreen extends AbstractContainerScreen<FletchingMenu> impl
 	@Override
 	public void recipesUpdated() {
 		this.recipeBookComponent.recipesUpdated();
-	}
-
-	@Override
-	public void removed() {
-		this.recipeBookComponent.removed();
-		super.removed();
 	}
 
 	@Override

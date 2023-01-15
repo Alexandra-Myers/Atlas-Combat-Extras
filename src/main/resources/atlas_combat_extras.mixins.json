@@ -6,6 +6,7 @@
   "plugin": "com.atlas.atlas_combat_extras.mixin.MixinPlugin",
   "mixins": [
     "ArrowMixin",
+    "CreativeModeTabsMixin",
     "FletchingTableMixin",
     "IngredientMixin",
     "PotionMixin",

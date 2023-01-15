@@ -25,7 +25,7 @@ public class FletchingRecipeBookAdder implements RecipeBookAdder {
 								return output instanceof SpectralArrowItem || output instanceof TippedArrowItem;
 							}
 							return false;
-						}, "minecraft:arrow")
+						}, "minecraft:spectral_arrow")
                         .build()
         );
     }

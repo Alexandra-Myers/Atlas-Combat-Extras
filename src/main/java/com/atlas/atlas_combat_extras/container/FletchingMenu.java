@@ -21,11 +21,6 @@ import java.util.Optional;
 
 public class FletchingMenu extends RecipeBookMenu<FletchingContainer> {
 	private final ContainerLevelAccess access;
-	private final DataSlot selectedRecipeIndex = DataSlot.standalone();
-	final Slot flintSlot;
-	final Slot stickSlot;
-	final Slot potionSlot;
-	final Slot featherSlot;
 	final Slot resultSlot;
 	public final Player player;
 	public final FletchingContainer container = new FletchingContainer(this, 2, 2);
@@ -39,10 +34,10 @@ public class FletchingMenu extends RecipeBookMenu<FletchingContainer> {
 		super(AtlasCombatExtras.FLETCHING, i);
 		this.access = containerLevelAccess;
 		player = inventory.player;
-		this.flintSlot = this.addSlot(new Slot(this.container, 1, 38, 22));
-		this.stickSlot = this.addSlot(new Slot(this.container, 0, 38, 44));
-		this.potionSlot = this.addSlot(new Slot(this.container, 2, 60, 22));
-		this.featherSlot = this.addSlot(new Slot(this.container, 3, 60, 44));
+		this.addSlot(new Slot(this.container, 1, 38, 22));
+		this.addSlot(new Slot(this.container, 0, 38, 44));
+		this.addSlot(new Slot(this.container, 2, 60, 22));
+		this.addSlot(new Slot(this.container, 3, 60, 44));
 		this.resultSlot = this.addSlot(new FletchingResultSlot(inventory.player, container, resultContainer, 4, 116, 33));
 
 		for(int j = 0; j < 3; ++j) {
@@ -55,7 +50,8 @@ public class FletchingMenu extends RecipeBookMenu<FletchingContainer> {
 			this.addSlot(new Slot(inventory, j, 8 + j * 18, 142));
 		}
 
-		this.addDataSlot(this.selectedRecipeIndex);
+		DataSlot selectedRecipeIndex = DataSlot.standalone();
+		this.addDataSlot(selectedRecipeIndex);
 	}
 
 	protected static void slotChangedCraftingGrid(
